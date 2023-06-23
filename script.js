@@ -1,22 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var botui = new BotUI("chatbot");
+function getResponse() {
+  // Get the user's question from the input textbox
+  var question = document.getElementById("question").value;
 
-  // Bot introduction
-  botui.message.add({
-    content: "Hello! How can I assist you today?",
-  });
+  // Process the question and get the response (for demonstration, let's assume a simple response)
+  var response = "You asked: " + question;
 
-  // User interaction
-  botui.action.text({
-    action: {
-      placeholder: "Type your message here",
-    },
-  }).then(function (res) {
-    botui.message.add({
-      content: "You said: " + res.value,
-    });
-
-    // Further bot responses or actions based on user input
-    // Add more botui.message.add and botui.action.* functions as needed
-  });
-});
+  // Display the response in the label
+  document.getElementById("responseLabel").textContent = response;
+}
