@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chatbot Example</title>
-  <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css" rel="stylesheet" />
+  <title>Textbox and Label Example</title>
 </head>
 <body>
-  <div id="chatbot"></div>
+  <label for="question">Ask a question:</label>
+  <input type="text" id="question" />
+  <button onclick="getResponse()">Submit</button>
+  <br />
+  <label id="responseLabel"></label>
+
   <script src="script.js"></script>
 </body>
 </html>
